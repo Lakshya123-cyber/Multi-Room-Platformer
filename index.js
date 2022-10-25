@@ -4,8 +4,6 @@ const c = canvas.getContext("2d");
 canvas.width = 64 * 16; // 1024
 canvas.height = 64 * 9; // 576
 
-
-
 const player = new Player();
 
 // let bottom = y + 100;
@@ -19,3 +17,15 @@ function animate() {
 }
 
 animate();
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "w":
+      if (player.velocity.y === 0) player.velocity.y = -20;
+      break;
+    case "a":
+      break;
+    case "d":
+      break;
+  }
+});
